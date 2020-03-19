@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+	<h1>Tutoring Services</h1>
+	<div>
+		<p>Due to the spread of COVID-19 across New York City and the rest of the United States:</p>
+		<ul>
+			<li>Many colleges, universities, and school districts have closed for unprecendented periods of time.</li>
+			<li>Students are therefore required to switch to distance learning.</li>
+			<li>Everyone is also expected to practice social distancing, which may be especially stressful for students.</li>
+			<li>This transition is likely to accompanied by several difficulties as students and instructors migrate to a virtual platform.</li>
+			<li>As a result, students will not be able to receive the same quality of learning online as they would in a classroom.</li>
+			<li>The problems students now face are especially detrimental to students from underserved districts.</li>
+		</ul>
+		<p>Because of this, I am advertising my tutoring services for these students in need.</p>
+		<p>I have years of experience tutoring mostly college students, but I am also comfortable working with high school students as well.</p>
+		<ol>
+			<li>I will dedicate at least three to five hours of <b>free tutoring</b> per week (one-on-one or group tutoring, depending on demand) to</li>
+			<ul>
+				<li>Underserved students</li>
+				<li>Students from low-income backgrounds (annual family income of less than $60,000)</li>
+				<li>Students underrepresented in STEM backgrounds</li>
+			</ul>
+			<li>For other students, I will charge only <b><u>$20/hour</u></b> to accommodate the difficulties students may face transitioning to an online medium.</li>
+			<ul>
+				<li>Note: If you are a student who I am currently TA-ing or tutoring within Stony Brook University's Academic Success and Tutoring Center, I cannot tutor you privately as this would represent a conflict of interest.</li>
+				<li><b>Disclaimer: I will not work on assignments that will be submitted for a grade. I can help with similar or previously graded problems, but I will not solve homework or exam problems, nor will I write essays for tutees. I am also not a consultant or adviser. Ultimately, each student is responsible for their own learning.</b></li>
+			</ul>
+			<li>To facilitate social distancing, all tutoring sessions will be given via videoconferencing (Skype, Facebook, Discord, Hangouts, etc).</li>
+		</ol>
+		<p>For more information about me and my qualifications, please see the "<a href="{{url_for('about')}}">About</a>" page.</p>
+	</div>
+	<div>
+		<p>I can tutor the following subjects*:</p>
+		<table class="table">
+			<tr><td><u>Biology</u></td>
+			<td><ul>
+				<li><b>(HS)</b> Regents/Honors Biology</li>
+				<li><b>(HS)</b> AP Biology</li>
+				<li>BIO 202: Molecular and Cellular Biology</li>
+				<li>BIO 203: Cellular and Organ Physiology</li>
+			</ul></td></tr>
+			<tr><td><u>Chemistry</u></td>
+			<td><ul>
+				<li><b>(HS)</b> Regents/Honors Chemistry</li>
+				<li><b>(HS)</b> AP Chemistry</li>
+				<li>CHE 152: Molecular Science I (equivalent to CHE 131: General Chemistry IB and CHE 132: General Chemistry II)</li>
+				<li>CHE 331: Molecular Science II (equivalent to CHE 321: Organic Chemistry I)</li>
+				<li>CHE 332: Molecular Science III (equivalent to CHE 322: Organic Chemistry IIA)</li>
+			</ul></td></tr>
+			<tr><td><u>Mathematics</u></td>
+			<td><ul>
+				<li><b>(HS)</b> Regents Algebra I</li>
+				<li><b>(HS)</b> Regents Geometry</li>
+				<li><b>(HS)</b> Regents Algebra II/Trigonometry</li>
+				<li><b>(HS)</b> AP Calculus AB/BC</li>
+				<li>MAT 125: Calculus A (differentiation)</li>
+				<li>MAT 126: Calculus B (integration)</li>
+				<li>MAT 131: Calculus I (equivalent to AMS 151: Applied Calculus I)</li>
+			</ul></td></tr>
+			<tr>
+				<td><u>Writing</u></td>
+				<td><ul>
+					<li>WRT 102: Intermediate Writing Workshop</li>
+					<li><b>For writing classes in general:</b> I can help you go over various aspects of your writing, such as sentence structure, paragraph placement, grammar, and punctuation to help you polish each piece.</li>
+				</ul></td>
+			</tr>
+			<tr><td><u>Standardized Test Prep</u></td>
+				<td><ul>
+					<li>SHSAT (Specialized High Schools Admissions Test)</li>
+					<li>SAT Subject Test: Biology (E/M)</li>
+					<li>SAT Subject Test: Mathematics Level 1</li>
+					<li>SAT Subject Test: Mathematics Level 2</li>
+					<li>SAT Subject Test: Chemistry</li>
+					<li>ACT: English, Mathematics, Reading, Science</li>
+				</ul></td>
+			</tr>
+		</table>
+		<p>*The college courses listed are Stony Brook University courses. For students of other colleges, I can tutor courses equivalent to the ones listed above.</p>
+		<p>If you are interested in these tutoring services, do not hesitate to reach out to me via my <a href="{{ url_for('resume') }}">"Contact"</a> page, and we can discuss appointment times.</p>
+		<p>My available times may be subject to change, depending on my schedule.</p>
+	</div>
+{% endblock %}

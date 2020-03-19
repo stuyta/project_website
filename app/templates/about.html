@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+	<h1>About</h1>
+	<div>
+		<p>My name is Shivasuryan Vummidi and I am currently a sophomore at Stony Brook University's Honors College pursuing a BS in Biochemistry on the pre-medical track, with minors in Chemistry and Writing & Rhetoric. I graduated Stuyvesant High School in 2018 with an Advanced Regents Diploma.</p>
+		<br>	
+		<p>Aside from science classes in college, I have a very strong passion for writing. Besides typical academic papers, I have been writing poems, short stories, and research-style prose since my junior year of high school. Writing serves as my main creative outlet and this website allows me to share my thoughts with the global community on an open platform.</p>
+		<br>
+		<p>Creating this website also helped rekindle my old passion for computer science, and I am excited to pursue new projects and learn new computer languages.</p>
+		<br>
+		<p>I also enjoy tutoring students - tutoring allows me to make a difference and touch the lives of students from a mentor's point of view. Therefore, I have created this website in mind of both realizing my passion and serving students in need.</p>		
+		{% if not current_user.is_anonymous %}
+		<br>
+		<a href="{{ url_for('return_file') }}">Here is a copy of my resume.</a> <!-- for future iterations -->
+		{% endif %}
+	</div>
+	<h2>Qualifications</h2>
+	<div>
+		<h3>Academic Performance</h3>
+		<ul>
+			<li>I currently have over a <u>3.9 GPA</u> at Stony Brook University and have been on the Dean's List since matriculation.</li>
+			<li>I graduated from Stuyvesant High School with a <u>3.94</u> unweighted GPA.</li>
+			<li>As a high school student, I have taken summer and weekend college courses at Harvard University and Hunter College and earned <u>4.0</u>s from both universities.</li>
+		</ul>
+		<h3>Awards</h3>
+		<table class="table">
+			<tr>
+				<td>Finalist for the US National Chemistry Olympiad</td>
+				<td>2018</td>				
+			</tr>
+			<tr>
+				<td>Semifinalist for the USA Biology Olympiad</td>
+				<td>2017, 2018</td>				
+			</tr>
+			<tr>
+				<td>Highest Honors: Stuyvesant Science Olympiad Excellence in Academic Competition</td>
+				<td>2018</td>				
+			</tr>
+			<tr>
+				<td>Honors: Excellence in Molecular Science and Molecular Genetics</td>
+				<td>2018</td>				
+			</tr>
+			<tr>
+				<td>Stuyvesant Science Olympiad Medalist (four first place, four second place)</td>
+				<td>2016 - 2018</td>				
+			</tr>
+			<tr>
+				<td>Represented Stuyvesant High School at the Lasker Awards ceremony</td>
+				<td>2015</td>				
+			</tr>
+		</table>
+		<h3>Work Experience</h3>
+		<p>In addition to privately tutoring students one-on-one, I have the following work experience:</p>
+		<table class="table">
+			<tr>
+				<td><u>Academic Success and Tutoring Center</u></td>
+				<td>Stony Brook University</td>
+				<td>2/2019 - present</td>
+				<td>I am a peer tutor holding hourly one-on-one appointments for calculus, organic chemistry, and biology.</td>
+			</tr>
+			<tr>
+				<td><u>Residential Tutoring Centers</u></td>
+				<td>Stony Brook University</td>
+				<td>2/2020 - present</td>
+				<td>I am a residential tutor holding walk-in group appointments for calculus and organic chemistry.</td>
+			</tr>
+			<tr>
+				<td><u>Science Olympiad Biology Captain</u></td>
+				<td>Stuyvesant High School</td>
+				<td>9/2017 - 6/2018</td>
+				<td>I served as biology captain for Stuyvesant Science Olympiad and prepared students to compete in Anatomy and Physiology and Microbe Mission.</td>
+			</tr>
+		</table>
+		<h3>Test Scores:</h3>
+		<table class="table">
+			<tr>
+				<td><u>ACT</u></td>
+				<td>
+					<p>Composite: <b>35</b></p>
+					<ul>
+						<li>Math: <b>34</b></li>
+						<li>English: <b>36</b></li>
+						<li>Reading: <b>35</b></li>
+						<li>Science: <b>36</b></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><u>SAT Subject Tests</u></td>
+				<td>
+					<ul>
+						<li>Math Level 2: <b>800</b></li>
+						<li>Chemistry: <b>800</b></li>
+						<li>Biology-M: <b>750</b></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td><u>AP Exams</u></td>
+				<td>
+					<p></u>AP Scholar with Distinction</u></p>
+					<ul>
+						<li>Computer Science A: <b>4</b></li>
+						<li>Chemistry: <b>5</b></li>
+						<li>Calculus BC: <b>5</b></li>
+							<ul><li>AB Subscore: <b>5</b></li></ul>
+						<li>Physics C: Electricity & Magnetism: <b>5</b></li>
+						<li>Physics C: Mechanics: <b>5</b></li>	
+						<li>Psychology<b>5</b></li>
+						<li>US History: <b>5</b></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+{% endblock %}

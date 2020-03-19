@@ -1,0 +1,35 @@
+<html>
+	<!--This html file will serve as the base template for other html files to build on-->
+	<head>
+		{% if not current_user.is_anonymous %}
+		<title>Welcome, admin</title>
+		{% else %}
+		<title>Welcome!</title>
+		{% endif %}
+	</head>
+	<body>
+		<div><h3>
+		SSURYAN.V: <a href="{{ url_for('index') }}">Homepage</a> <!--Links back to homepage-->
+		{% if current_user.is_anonymous %}
+		<a href="{{ url_for('login') }}">Login</a> <!--Login-->
+		{% else %}
+		<a href="{{ url_for('edit') }}">Add Post</a> <!--Add Post-->
+		<a href="{{ url_for('remove')}}">Remove Post</a>
+		<a href="{{ url_for('logout') }}">Logout</a> <!--Logout-->
+		{% endif %}
+		<a href="{{ url_for('resume') }}">Contact</a> <!--Contact-->
+		</h3>
+		</div>
+		<hr>
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+			<li>{{ message }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+		{% endwith %}
+		{% block content %} {% endblock %}
+	</body>
+</html>

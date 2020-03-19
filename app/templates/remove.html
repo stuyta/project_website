@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block app_content %}
+	<h1>Remove a Post</h1>
+	<form action="" method="post" novalidate>
+		{{ form.hidden_tag() }}
+		<p>
+			{{ form.number.label }} <br>
+			{{ form.number(size=32) }}
+			{% for error in form.number.errors %} <!--ID of post to be removed-->
+			<span style="color:red;">[{{ error }}]</span>
+			{% endfor %}
+		</p>
+
+		<p> {{ form.submit }}</p> <!--Submit button-->
+	</form>
+{% endblock %}

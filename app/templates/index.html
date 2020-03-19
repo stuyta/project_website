@@ -1,0 +1,35 @@
+<!--This file extends the base template and serves as the homepage-->
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+{% block app_content %}
+	<h1> Shivasuryan Vummidi's Blog Space </h1>
+	{% if prev_url %}
+	<a href="{{ prev_url }}">Newer Posts</a>
+	{% endif %}
+	{% if next_url %}
+	<a href="{{ next_url }}">Older Posts</a>
+	{% endif %}
+	<table class="table">
+	{% for post in posts %}
+		<tr>
+			<td>{{ post.author.username }} - 
+			<i>{{ post.title }}</i> -      Created on {{ moment(post.timestamp).format('LLL') }}</p>
+			<br>
+			<p>{{ post.body }}</p>
+			<br>
+			</td>
+			{% if not current_user.is_anonymous %}
+			<td>Post ID: {{ post.id }}</td>
+			{% endif %}
+		</tr>
+	{% endfor %}
+	</table>
+	{% if prev_url %}
+	<a href="{{ prev_url }}">Newer Posts</a>
+	{% endif %}
+	{% if next_url %}
+	<a href="{{ next_url }}">Older Posts</a>
+	{% endif %}
+	<!--Put a database here in a for loop, and the database contains each blog article-->
+{% endblock %}
